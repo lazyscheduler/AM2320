@@ -8,10 +8,13 @@
 class AM2320
 {
 	public:
-		AM2320();
+		AM2320(uint8_t SDApin, uint8_t SCLpin);
 		float t;
 		float h;
-		int Read(uint8_t SDApin, uint8_t SCLpin); 
+		int Read(); 
+	private:
+		uint8_t _sda, _scl;
+
 };
 
 #endif

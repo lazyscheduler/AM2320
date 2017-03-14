@@ -22,13 +22,16 @@ unsigned int CRC16(byte *ptr, byte length)
       return crc; 
 } 
 
-AM2320::AM2320()
+AM2320::AM2320(uint8_t SDApin, uint8_t SCLpin)
 {	
+  _sda = SDApin;
+  _scl = SCLpin;
+
 }
 
-int AM2320::Read(uint8_t SDApin, uint8_t SCLpin)
+int AM2320::Read()
 {
-	SoftwareWire Wire(SDApin, SCLpin);
+	SoftwareWire Wire(_sda, _scl);
 	Wire.begin();
 	byte buf[8];
 	for(int s = 0; s < 8; s++) buf[s] = 0x00; 
