@@ -2,8 +2,9 @@
 #include <AM2320.h>
 
 
-AM2320 th(5,6); // AM2320 sensor attached SDA to digital PIN 5 and SCL to digital PIN 6
-AM2320 th2(9,10); // AM2320 sensor attached SDA to digital PIN 9 and SCL to digital PIN 10
+
+AM2320 sensor1(5,6); // AM2320 sensor attached SDA to digital PIN 5 and SCL to digital PIN 6
+AM2320 sensor2(9,10); // AM2320 sensor attached SDA to digital PIN 9 and SCL to digital PIN 10
 
 void setup() {
   Serial.begin(9600);
