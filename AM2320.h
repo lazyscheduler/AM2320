@@ -11,7 +11,7 @@ class AM2320
 		AM2320();
 		float t;
 		float h;
-		int Read(void); 
+		int Read(uint8_t SDApin, uint8_t SCLpin); 
 };
 
 #endif
