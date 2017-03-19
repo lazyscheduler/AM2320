@@ -12,7 +12,7 @@ void setup() {
 
 void loop() {
 
-  switch(th.Read()) {
+  switch(sensor1.Read()) {
     case 2:
       Serial.println("CRC failed");
       break;
@@ -21,14 +21,14 @@ void loop() {
       break;
     case 0:
       Serial.print("Humidity: ");
-      Serial.print(th.h);
+      Serial.print(sensor1.h);
       Serial.print("%\t Temperature: ");
-      Serial.print(th.t);
+      Serial.print(sensor1.t);
       Serial.println("*C");
       break;
   }
 
-   switch(th2.Read()) {
+   switch(sensor2.Read()) {
     case 2:
       Serial.println("CRC failed");
       break;
@@ -37,9 +37,9 @@ void loop() {
       break;
     case 0:
       Serial.print("Humidity: ");
-      Serial.print(th2.h);
+      Serial.print(sensor2.h);
       Serial.print("%\t Temperature: ");
-      Serial.print(th2.t);
+      Serial.print(sensor2.t);
       Serial.println("*C\n\n");
       break;
   }
